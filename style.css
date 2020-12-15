@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.panels {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.panel {
+  background: rgb(38, 196, 175);
+  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: center;
+  align-items: center;
+  transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel1 {
+  background-image: url(https://img5.goodfon.ru/wallpaper/nbig/a/e7/peizazh-gory-priroda-ozero-otrazhenie-kamni-skaly-vershiny-k.jpg);
+}
+.panel2 {
+  background-image: url(https://img5.goodfon.ru/wallpaper/nbig/4/4f/zima-sneg-priroda-sugroby-les-zasnezhennyi-eli-iolochki-3.jpg);
+}
+.panel3 {
+  background-image: url(https://img1.goodfon.ru/wallpaper/nbig/7/a1/valentine-s-day-love-romance-6077.jpg);
+}
+.panel4 {
+  background-image: url(https://img5.goodfon.ru/wallpaper/nbig/5/98/ssha-grand-kanon-bolshoi-kanon-skaly-gory-kanony-vysota-vers.jpg);
+}
+.panel5 {
+  background-image: url(https://img1.goodfon.ru/wallpaper/nbig/f/25/vysokoe-kachestvo-horoshee.jpg);
+}
+
+.panel > * {
+  margin: 0;
+  width: 100%;
+  transition: transform 0.5s;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel > *:first-child {
+  transform: translateY(-100%);
+}
+.panel.open-active > *:first-child {
+  transform: translateY(0);
+}
+.panel > *:last-child {
+  transform: translateY(100%);
+}
+.panel.open-active > *:last-child {
+  transform: translateY(0);
+}
+
+.panel p {
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+  font-size: 2rem;
+}
+
+.panel p:nth-child(2) {
+  font-size: 4rem;
+}
+
+.panel.open {
+  flex: 2;
+  font-size: 30px;
+}
